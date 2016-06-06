@@ -8,9 +8,9 @@
 #define ADS1256_h
 
 // Define PORT
-#define PORT_DRDY PORTL // Pin 48 on Arduino Mega
+#define PORT_DRDY PORTL // Pin 49 on Arduino Mega
 #define PIN_DRDY PINL
-#define PINDEX_DRDY PL1
+#define PINDEX_DRDY PL0
 #define DDR_DRDY DDRL
 
 #define PORT_CS PORTB // Pin 53 on Arduino Mega
@@ -18,10 +18,10 @@
 #define PINDEX_CS PB0
 #define DDR_CS DDRB
 
-#define PORT_RESET PORTD
-#define PIN_REST PIND
-#define PINDEX_RESET PD0
-#define DDR_RESET DDRD
+#define PORT_RESET PORTL // PIN 48 on Arduino Mega
+#define PIN_REST PINL
+#define PINDEX_RESET PL1
+#define DDR_RESET DDRL
 
 // ADS1256 Register
 #define STATUS 0x00
