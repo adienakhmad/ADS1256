@@ -1,5 +1,12 @@
 # ADS1256
-Arduino Library for Texas Instrument ADS1256
+Arduino Library for Texas Instrument ADS1256, working with Arduino IDE 1.8.5, Arduino UNO 
 
-#Notice 2017/11/20
-The example provided is out-of-date, I'll update the example when I have the time.
+# Installation
+As any arduino library (import library)
+
+# Examples
+Basic_Switching_Channel: How to change the channels
+ADS1256_Efficient_Input_Cycling: Read and print 
+
+# Notice: Working as 5/1/2019
+
