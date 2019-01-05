@@ -28,10 +28,11 @@
 	// Direct PORT 
 	#error "Oops! ESP32 architecture not supported yet"
 	// Contributions are welcome
-#elif  
+#else  
 	#error "Oops! Your board architecture is not supported yet'"
 	// Contributions are welcome
 #endif
+
 // ADS1256 Register
 #define STATUS 0x00
 #define MUX 0x01
