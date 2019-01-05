@@ -83,7 +83,7 @@ void ADS1256::readTest() {
   CSOFF();
 }
 
-float ADS1256::readChannel() {
+float ADS1256::readCurrentChannel() {
   CSON();
   SPI.transfer(RDATA);
   __builtin_avr_delay_cycles(200);  // t6 delay
