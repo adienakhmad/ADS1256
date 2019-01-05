@@ -24,15 +24,31 @@
 	#define PINDEX_RESET PB0
 	#define DDR_RESET DDRB
 
-#elif  defined(ARDUINO_ARCH_ESP32)
-	// Direct PORT 
-	#error "Oops! ESP32 architecture not supported yet"
-	// Contributions are welcome
-#else  
-	#error "Oops! Your board architecture is not supported yet'"
-	// Contributions are welcome
-#endif
+#elif defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+	// Define PORT
+	#define PORT_DRDY PORTL // Pin 49 on Arduino Mega
+	#define PIN_DRDY PINL
+	#define PINDEX_DRDY PL0
+	#define DDR_DRDY DDRL
 
+	#define PORT_CS PORTB // Pin 53 on Arduino Mega
+	#define PIN_CS PINB
+	#define PINDEX_CS PB0
+	#define DDR_CS DDRB
+
+	#define PORT_RESET PORTL // PIN 48 on Arduino Mega
+	#define PIN_REST PINL
+	#define PINDEX_RESET PL1
+	#define DDR_RESET DDRL
+	
+	// Contributions are welcome
+#elif   defined(ARDUINO_ARCH_ESP32)
+	#error "Oops! ESP32 architecture not supported yet"	
+	// Contributions are welcome
+#else 
+	// Contributions are welcome
+	#error "Oops! Your board architecture is not supported yet'"
+#endif
 // ADS1256 Register
 #define STATUS 0x00
 #define MUX 0x01
