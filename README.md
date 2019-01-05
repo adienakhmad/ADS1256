@@ -6,7 +6,8 @@ As any arduino library (import library)
 
 # Examples
 Basic_Switching_Channel: How to change the channels
+
 ADS1256_Efficient_Input_Cycling: Read and print 
 
-# Notice: Working as 5/1/2019
+#Notice: Working as 5/1/2019
 
