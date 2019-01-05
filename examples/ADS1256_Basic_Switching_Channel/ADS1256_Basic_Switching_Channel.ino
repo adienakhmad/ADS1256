@@ -2,6 +2,7 @@
 // Switching channel for ADS1256. This sample code only write to MUX register and read it back.
 // The purpose of this code is to show how to use switchChannel function.
 // Written by Adien Akhmad, August 2015
+// Modfified  Jan 2019 by Axel Sepulveda for ATMEGA328
 
 #include <ADS1256.h>
 #include <SPI.h>
@@ -19,7 +20,7 @@ void setup()
   
 /*  Single Ended Mode
     ADS1256 support 8 single ended channel
-    use switchChannel(p) for this purpose, where p is the number of positive input channel between 0 and 7 (AIN0 to AIN7).
+    use setChannel(p) for this purpose, where p is the number of positive input channel between 0 and 7 (AIN0 to AIN7).
     AINCOM are automatically set as the negative input channel.
 */
 
@@ -28,14 +29,14 @@ void setup()
   for (int i = 0; i < 8; ++i)
   {
     adc.waitDRDY();
-    adc.switchChannel(i);
+    adc.setChannel(i);
     Serial.print("Current Channel: ");
     Serial.println(adc.readRegister(MUX),HEX); // Read the multiplex register to see the current active channel
   }
 
 /*  Differential Mode
     ADS1256 support 4 differential channel
-    use switchChannel(p,n) for this purpose, where
+    use setChannel(p,n) for this purpose, where
       p is the number of positive input channel between 0 and 7 (AIN0 to AIN7),
       n is the number of negative input channel between 0 and 7 (AIN0 to AIN7).
 */
@@ -45,7 +46,7 @@ void setup()
   for (int i = 0; i < 8; i+=2)
   {
     adc.waitDRDY();
-    adc.switchChannel(i,i+1);
+    adc.setChannel(i,i+1);
     Serial.print("Current Channel: ");
     Serial.println(adc.readRegister(MUX),HEX); // Read the multiplex register to see the current active channel
   }

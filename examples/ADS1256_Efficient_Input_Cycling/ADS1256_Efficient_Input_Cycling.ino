@@ -1,13 +1,14 @@
 // Arudino Sample Code to use ADS1256 library
 // Read 4 sensor using effiecient input cycling
 // Written by Adien Akhmad, August 2015
+// Modfified  Jan 2019 by Axel Sepulveda for ATMEGA328
 
 #include <ADS1256.h>
 #include <SPI.h>
 
 float clockMHZ = 7.68; // crystal frequency used on ADS1256
 float vRef = 2.5; // voltage reference
-// Define ADS1256 PIN that is connected to Arduino
+// Initialize ADS1256 object
 ADS1256 adc(clockMHZ,vRef,false); // RESETPIN is permanently tied to 3.3v
 
 /* Variable to store sensor reading
