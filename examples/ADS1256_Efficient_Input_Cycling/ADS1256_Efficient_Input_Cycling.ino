@@ -53,7 +53,7 @@ void setup()
 
   Serial.println("ADC Started");
   
-  // Set MUX Register to AINO and AIN1
+   // Set MUX Register to AINO and AIN1 so it start doing the ADC conversion
   adc.setChannel(0,1);
 }
 
@@ -64,7 +64,7 @@ void loop()
   // to learn further, read on datasheet page 21, figure 19 : Cycling the ADS1256 Input Multiplexer
   
   adc.waitDRDY(); // wait for DRDY to go low before changing multiplexer register
-  adc.setChannel(2,3);
+  adc.setChannel(2,3);   // Set the MUX for differential between ch2 and 3 
   sensor1 = adc.readCurrentChannel(); // DOUT arriving here are from MUX AIN0 and AIN1
 
   adc.waitDRDY();
