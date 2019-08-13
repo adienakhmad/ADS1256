@@ -8,7 +8,7 @@
 #include <SPI.h>
 
 // Initialize ADS1256 object
-ADS1256 adc(7.68, 9, 8, 2.5); // clockSpeed in Mhz, DRDY PIN, CS PIN, VREF in volt, RESET PIN are permanently tied to 3.3V
+ADS1256 adc(7.68, 2.5, true ); // clockSpeed in Mhz,  VREF in volt, if use RESET PIN 
 
 void setup()
 {
