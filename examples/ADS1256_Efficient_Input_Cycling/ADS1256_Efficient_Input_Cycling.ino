@@ -1,5 +1,5 @@
 // Arudino Sample Code to use ADS1256 library
-// Read 4 sensor using effiecient input cycling
+// Reads 4 differential channels using effiecient input cycling
 // Written by Adien Akhmad, August 2015
 // Modfified  Jan 2019 by Axel Sepulveda for ATMEGA328
 
@@ -48,7 +48,14 @@ void setup()
   // 
   // NOTE : Data Rate vary depending on crystal frequency. Data rates listed below assumes the crystal frequency is 7.68Mhz
   //        for other frequency consult the datasheet.
-
+  //Posible Gains 
+  //ADS1256_GAIN_1 
+  //ADS1256_GAIN_2 
+  //ADS1256_GAIN_4 
+  //ADS1256_GAIN_8 
+  //ADS1256_GAIN_16 
+  //ADS1256_GAIN_32 
+  //ADS1256_GAIN_64 
   adc.begin(ADS1256_DRATE_15SPS,ADS1256_GAIN_1,false); 
 
   Serial.println("ADC Started");
