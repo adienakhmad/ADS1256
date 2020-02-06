@@ -32,6 +32,7 @@ void setup()
     adc.setChannel(i);
     Serial.print("Current Channel: ");
     Serial.println(adc.readRegister(MUX),HEX); // Read the multiplex register to see the current active channel
+    //Should it be? adc.readCurrentChannel()
   }
 
 /*  Differential Mode
@@ -49,9 +50,10 @@ void setup()
     adc.setChannel(i,i+1);
     Serial.print("Current Channel: ");
     Serial.println(adc.readRegister(MUX),HEX); // Read the multiplex register to see the current active channel
+    //Should it be? adc.readCurrentChannel()
   }
 
-  // Please note that AINCOM are defined as channel 8
+  // Please note that AINCOM is defined as channel number 8
   // When you read the serial output,
   // 08h means AIN0 - AINCOM
   // 18h means AIN1 - AINCOM
