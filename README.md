@@ -4,6 +4,16 @@ Arduino Library for Texas Instrument ADS1256, working with Arduino IDE 1.8.5, Ar
 # Installation
 As any arduino library (import library)
 
+# Wiring
+ADS Board   -     Arduino UNO Board
+
+SCLK        -     pin 13 (SCK)
+DIN         -     pin 11 (MOSI)
+DOUT        -     pin 12 (MISO)
+DRDY        -     pin 9
+CS          -     pin 10
+RESET       -     pin 8 (or tie to GND)
+
 # Examples
 Basic_Switching_Channel: How to change the channels
 
