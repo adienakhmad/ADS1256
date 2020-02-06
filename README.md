@@ -7,6 +7,10 @@ As any arduino library (import library)
 # Wiring
 ADS Board   -     Arduino UNO Board
 
+5V          -     5V
+
+GND         -     GND
+
 SCLK        -     pin 13 (SCK)
 
 DIN         -     pin 11 (MOSI)
@@ -17,7 +21,7 @@ DRDY        -     pin 9
 
 CS          -     pin 10
 
-RESET       -     pin 8 (or tie to GND)
+POWN       -      5V
 
 
 # Examples
