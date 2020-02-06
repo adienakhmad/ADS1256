@@ -8,11 +8,17 @@ As any arduino library (import library)
 ADS Board   -     Arduino UNO Board
 
 SCLK        -     pin 13 (SCK)
+
 DIN         -     pin 11 (MOSI)
+
 DOUT        -     pin 12 (MISO)
+
 DRDY        -     pin 9
+
 CS          -     pin 10
+
 RESET       -     pin 8 (or tie to GND)
+
 
 # Examples
 Basic_Switching_Channel: How to change the channels
