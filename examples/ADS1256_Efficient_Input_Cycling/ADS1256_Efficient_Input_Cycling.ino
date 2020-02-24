@@ -1,13 +1,14 @@
 // Arudino Sample Code to use ADS1256 library
-// Read 4 sensor using effiecient input cycling
+// Reads 4 differential channels using effiecient input cycling
 // Written by Adien Akhmad, August 2015
+// Modfified  Jan 2019 by Axel Sepulveda for ATMEGA328
 
 #include <ADS1256.h>
 #include <SPI.h>
 
 float clockMHZ = 7.68; // crystal frequency used on ADS1256
 float vRef = 2.5; // voltage reference
-// Define ADS1256 PIN that is connected to Arduino
+// Initialize ADS1256 object
 ADS1256 adc(clockMHZ,vRef,false); // RESETPIN is permanently tied to 3.3v
 
 /* Variable to store sensor reading
@@ -47,12 +48,19 @@ void setup()
   // 
   // NOTE : Data Rate vary depending on crystal frequency. Data rates listed below assumes the crystal frequency is 7.68Mhz
   //        for other frequency consult the datasheet.
-
+  //Posible Gains 
+  //ADS1256_GAIN_1 
+  //ADS1256_GAIN_2 
+  //ADS1256_GAIN_4 
+  //ADS1256_GAIN_8 
+  //ADS1256_GAIN_16 
+  //ADS1256_GAIN_32 
+  //ADS1256_GAIN_64 
   adc.begin(ADS1256_DRATE_15SPS,ADS1256_GAIN_1,false); 
 
   Serial.println("ADC Started");
   
-  // Set MUX Register to AINO and AIN1
+   // Set MUX Register to AINO and AIN1 so it start doing the ADC conversion
   adc.setChannel(0,1);
 }
 
@@ -63,7 +71,7 @@ void loop()
   // to learn further, read on datasheet page 21, figure 19 : Cycling the ADS1256 Input Multiplexer
   
   adc.waitDRDY(); // wait for DRDY to go low before changing multiplexer register
-  adc.setChannel(2,3);
+  adc.setChannel(2,3);   // Set the MUX for differential between ch2 and 3 
   sensor1 = adc.readCurrentChannel(); // DOUT arriving here are from MUX AIN0 and AIN1
 
   adc.waitDRDY();

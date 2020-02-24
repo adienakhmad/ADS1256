@@ -14,7 +14,7 @@ ADS1256	KEYWORD1
 writeRegister	KEYWORD2
 readRegister	KEYWORD2
 sendCommand	KEYWORD2
-readCurrentChannel	KEYWORD2
+readChannel	KEYWORD2
 setConversionFactor	KEYWORD2
 switchChannel	KEYWORD2
 start	KEYWORD2

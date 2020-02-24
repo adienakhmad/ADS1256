@@ -1,7 +1,7 @@
 /*
-        ADS1256.h - Arduino Library for communication with Texas Instrument
-   ADS1256 ADC
+        ADS1256.h - Arduino Library for communication with Texas Instrument ADS1256 ADC
         Written by Adien Akhmad, August 2015
+		Modfified  Jan 2019 by Axel Sepulveda for ATMEGA328
 */
 
 #include "ADS1256.h"
@@ -83,7 +83,7 @@ void ADS1256::readTest() {
   CSOFF();
 }
 
-float ADS1256::readChannel() {
+float ADS1256::readCurrentChannel() {
   CSON();
   SPI.transfer(RDATA);
   __builtin_avr_delay_cycles(200);  // t6 delay
