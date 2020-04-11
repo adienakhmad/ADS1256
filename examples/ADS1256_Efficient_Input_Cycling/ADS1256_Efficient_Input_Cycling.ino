@@ -1,4 +1,5 @@
 // Arudino Sample Code to use ADS1256 library
+
 // Efficient Input Cycling
 // Reads 4 differential channels using effiecient input cycling
 /* Sensor reading:
