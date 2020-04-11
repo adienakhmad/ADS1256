@@ -1,5 +1,8 @@
 // Arudino Sample Code to use ADS1256 library
-// Switching channel for ADS1256. This sample code only write to MUX register and read it back.
+// Switching channel for ADS1256. 
+// This sample code writes to MUX register and reads ADC values back.
+// First for loop reads all channels in single ended mode.
+// Second for loop reads 4 differential channels
 // The purpose of this code is to show how to use switchChannel function.
 // Written by Adien Akhmad, August 2015
 // Modfified  Jan 2019 by Axel Sepulveda for ATMEGA328
