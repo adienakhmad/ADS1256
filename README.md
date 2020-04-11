@@ -68,22 +68,21 @@ This way code and ADC may work faster, as you can do other stuff while ADC reads
 If you want to exploit all the features of the chip (http://www.ti.com/lit/ds/symlink/ads1256.pdf) you can use these functions to read/write the registers 
 
 * adc.sendCommand(command): sends a valid "command" to the ADC. Refer to datasheet http://www.ti.com/lit/ds/symlink/ads1256.pdf for further info, page34. Valid comands: 
-
-* WAKEUP Completes SYNC and Exits Standby Mode
-* RDATA Read Data
-* RDATAC Read Data Continuously
-* SDATAC Stop Read Data Continuously
-* RREG Read from REG rrr
-* WREG Write to REG rrr
-* SELFCAL Offset and Gain Self-Calibration
-* SELFOCAL Offset Self-Calibration
-* SELFGCAL Gain Self-Calibration
-* SYSOCAL System Offset Calibration
-* SYSGCAL System Gain Calibration
-* SYNC Synchronize the A/D Conversion
-* STANDBY Begin Standby Mode
-* RESET Reset to Power-Up Values
-* WAKEUP Completes SYNC and Exits Standby Mode
+  * WAKEUP Completes SYNC and Exits Standby Mode
+  * RDATA Read Data
+  * RDATAC Read Data Continuously
+  * SDATAC Stop Read Data Continuously
+  * RREG Read from REG rrr
+  * WREG Write to REG rrr
+  * SELFCAL Offset and Gain Self-Calibration
+  * SELFOCAL Offset Self-Calibration
+  * SELFGCAL Gain Self-Calibration
+  * SYSOCAL System Offset Calibration
+  * SYSGCAL System Gain Calibration
+  * SYNC Synchronize the A/D Conversion
+  * STANDBY Begin Standby Mode
+  * RESET Reset to Power-Up Values
+  * WAKEUP Completes SYNC and Exits Standby Mode
 
 Example: 
 
@@ -100,12 +99,19 @@ Example:
 adc.readRegister(MUX): Read the current content of the MUX register, be aware if the conversion cycle is not complete this will probably read garbage. 
 
 
+# ADC Calibration 
+Refer to the datasheet and advanced functions
+
 # Dependencies
 
 This code uses Arduino SPI library and some direct port manipulation
 
 # Licence, Atribuions and Contributions
+Licence:
 
+Github users:
+* adienakhmad
+* chepo92
 
 
 ## Notice: Working as 5/1/2019
