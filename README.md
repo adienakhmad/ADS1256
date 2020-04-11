@@ -113,6 +113,8 @@ Github users:
 * adienakhmad
 * chepo92
 
+Contributions are welcomed to https://github.com/adienakhmad/ADS1256
+
 
 ## Notice: Working as 5/1/2019
 
