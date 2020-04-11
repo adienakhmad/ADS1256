@@ -9,6 +9,9 @@
   sensor4 = differential input connected on AIN6 - AIN7
 */
 // to learn further, read on datasheet page 21, figure 19 : Cycling the ADS1256 Input Multiplexer
+
+// http://www.ti.com/lit/ds/symlink/ads1256.pdf
+
 // Written by Adien Akhmad, August 2015
 // Modfified  Jan 2019 by Axel Sepulveda for ATMEGA328
 
