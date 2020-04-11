@@ -83,7 +83,7 @@ void ADS1256::readTest() {
   CSOFF();
 }
 
-float ADS1256::readCurrentChannel() {
+float ADS1256::readCurrentChannelVolt() {
   CSON();
   SPI.transfer(RDATA);
   __builtin_avr_delay_cycles(200);  // t6 delay
@@ -91,6 +91,15 @@ float ADS1256::readCurrentChannel() {
   CSOFF();
   return ((adsCode / 0x7FFFFF) * ((2 * _VREF) / (float)_pga)) *
          _conversionFactor;
+}
+
+float ADS1256::readCurrentChannel() {
+  CSON();
+  SPI.transfer(RDATA);
+  __builtin_avr_delay_cycles(200);  // t6 delay
+  float adsCode = read_float32();
+  CSOFF();
+  return ((adsCode / 0x7FFFFF) * _conversionFactor;
 }
 
 // Call this ONLY after RDATA command
@@ -230,6 +239,10 @@ void ADS1256::CSOFF() {
 }  // digitalWrite(_CS, HIGH); }
 
 void ADS1256::waitDRDY() {
-  while (PIN_DRDY & (1 << PINDEX_DRDY))
+  while (!isDRDY())
     ;
 }
+
+boolean ADS1256::isDRDY() {
+  return ~(PIN_DRDY & (1 << PINDEX_DRDY));
+}	  
