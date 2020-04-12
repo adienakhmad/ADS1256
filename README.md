@@ -3,24 +3,27 @@ Arduino Library for Texas Instrument ADS1256, working with Arduino IDE 1.8.5, Ar
 Please read datasheet: 
 http://www.ti.com/lit/ds/symlink/ads1256.pdf
 
+# To Do and wish List
+- Add ESP8266/32 support
+
+
 # Installation
 As any arduino library (download repo, import library)
 
 # Compatibility 
 Tested with arduino UNO and MEGA
 
-ESP boards (work in progress @chepo92) 
-
 # Wiring
-* ADS Board   -     Arduino UNO Board
-* 5V          -     5V
-* GND         -     GND
-* SCLK        -     pin 13 (SCK)
-* DIN         -     pin 11 (MOSI)
-* DOUT        -     pin 12 (MISO)
-* DRDY        -     pin 9
-* CS          -     pin 10
-* POWN       -      5V
+| ADS Board | Arduino UNO Board |
+|-----------|-------------------|
+| * 5V      | 5V                |
+| * GND     | GND               |
+| * SCLK    | pin 13 (SCK)      |
+| * DIN     | pin 11 (MOSI)     |
+| * DOUT    | pin 12 (MISO)     |
+| * DRDY    | pin 9             |
+| * CS      | pin 10            |
+| * POWN    | 5V                |
 
 # Examples
 
