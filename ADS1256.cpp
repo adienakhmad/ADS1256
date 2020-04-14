@@ -233,3 +233,7 @@ void ADS1256::waitDRDY() {
   while (PIN_DRDY & (1 << PINDEX_DRDY))
     ;
 }
+
+boolean ADS1256::isDRDY() {
+  return ~(PIN_DRDY & (1 << PINDEX_DRDY));
+}	
