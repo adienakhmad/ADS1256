@@ -141,14 +141,13 @@ class ADS1256 {
   void writeRegister(unsigned char reg, unsigned char wdata);
   unsigned char readRegister(unsigned char reg);
   void sendCommand(unsigned char cmd);
-  float readCurrentChannelVolt();
   float readCurrentChannel();
   void setConversionFactor(float val);
   void setChannel(byte channel);
   void setChannel(byte AIP, byte AIN);
   void begin(unsigned char drate, unsigned char gain, bool bufferenable);
   void waitDRDY();
-  boolean isDRDY();	
+  boolean isDRDY();
   void setGain(uint8_t gain);
   void readTest();
 
