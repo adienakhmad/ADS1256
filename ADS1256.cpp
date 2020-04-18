@@ -93,6 +93,15 @@ float ADS1256::readCurrentChannel() {
          _conversionFactor;
 }
 
+float ADS1256::readCurrentChannelRaw() {
+  CSON();
+  SPI.transfer(RDATA);
+  __builtin_avr_delay_cycles(200);  // t6 delay
+  float adsCode = read_float32();
+  CSOFF();
+  return ((adsCode / 0x7FFFFF) * _conversionFactor;
+}
+
 // Call this ONLY after RDATA command
 unsigned long ADS1256::read_uint24() {
   unsigned char _highByte, _midByte, _lowByte;
@@ -233,3 +242,7 @@ void ADS1256::waitDRDY() {
   while (PIN_DRDY & (1 << PINDEX_DRDY))
     ;
 }
+
+boolean ADS1256::isDRDY() {
+  return ~(PIN_DRDY & (1 << PINDEX_DRDY));
+}	
