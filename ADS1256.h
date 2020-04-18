@@ -147,7 +147,7 @@ class ADS1256 {
   void setChannel(byte AIP, byte AIN);
   void begin(unsigned char drate, unsigned char gain, bool bufferenable);
   void waitDRDY();
-  void isDRDY();
+  boolean isDRDY();
   void setGain(uint8_t gain);
   void readTest();
 
