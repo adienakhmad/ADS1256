@@ -14,16 +14,16 @@ As any arduino library (download repo, import library)
 Tested with arduino UNO and MEGA
 
 # Wiring
-| ADS Board | Arduino UNO Board |
-|-----------|-------------------|
-| * 5V      | 5V                |
-| * GND     | GND               |
-| * SCLK    | pin 13 (SCK)      |
-| * DIN     | pin 11 (MOSI)     |
-| * DOUT    | pin 12 (MISO)     |
-| * DRDY    | pin 9             |
-| * CS      | pin 10            |
-| * POWN    | 5V                |
+| ADS Board | Arduino UNO Board | Arduino MEGA Board |
+|-----------|-------------------|--------------------|
+| * 5V      | 5V                | 5V                 |
+| * GND     | GND               | GND                |
+| * SCLK    | pin 13 (SCK)      | pin (SCK)          |
+| * DIN     | pin 11 (MOSI)     | pin (MOSI)         |
+| * DOUT    | pin 12 (MISO)     | pin (MISO)         |
+| * DRDY    | pin 9             | pin  49            |
+| * CS      | pin 10            | pin  53            |
+| * POWN    | 5V or pin 8       | 5V or pin 48       |
 
 # Examples
 
@@ -45,7 +45,7 @@ https://github.com/adienakhmad/ADS1256/tree/master/examples/ADS1256_Efficient_In
 
 * adc.setChannel(x): Sets the channels to be read in next reading cycle, configured in "single end" (reads between the "x" input AINx and ground GND). Returns void
   
-* adc.setChannel(i,j): Sets the channels to be read in next reading cycle, configured in "differential mode", first argument (i) is the positive input and second argument (j) is negative input to ADC. As stated in device datasheet any combination (i,j) (between 0 and 7) is possible but it's recomended to use adjacent inputs (0 and 1, 2 and 3, etc). Returns void
+* adc.setChannel(i,j): Sets the channels to be read in next reading cycle, configured in "differential mode", first argument (i) is the positive input and second argument (j) is negative input to ADC, so ADC value woud correspond to voltage difference i-j. As stated in device datasheet any combination (i,j) (between 0 and 7) is possible but it's recomended to use adjacent inputs (0 and 1, 2 and 3, etc). Returns void
 
 * adc.readCurrentChannel(): Returns the value of the currently raw data stored in the MUX register. Returns float (should be changed to long...) 
 
