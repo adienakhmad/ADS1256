@@ -119,5 +119,5 @@ Github users:
 Contributions are welcomed to https://github.com/adienakhmad/ADS1256
 
 
-## Notice: Working as 5/1/2019
+## Notice: Working as 4/5/2020
 
