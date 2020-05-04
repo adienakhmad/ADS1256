@@ -90,7 +90,7 @@ float ADS1256::readCurrentChannel() {
   float adsCode = read_float32();
   CSOFF();
   return ((adsCode / 0x7FFFFF) * ((2 * _VREF) / (float)_pga)) *
-         _conversionFactor);
+         _conversionFactor;
 }
 
 // Call this ONLY after RDATA command
