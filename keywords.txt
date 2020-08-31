@@ -11,30 +11,33 @@ ADS1256	KEYWORD1
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-writeRegister	KEYWORD2
-readRegister	KEYWORD2
-sendCommand	KEYWORD2
-readChannel	KEYWORD2
-setConversionFactor	KEYWORD2
-switchChannel	KEYWORD2
-start	KEYWORD2
-waitDRDY	KEYWORD2
+writeRegister               KEYWORD2
+readRegister                KEYWORD2
+sendCommand                 KEYWORD2
+readCurrentChannel          KEYWORD2
+readCurrentChannelRaw       KEYWORD2
+setConversionFactor         KEYWORD2
+setChannel                  KEYWORD2
+waitDRDY                    EYWORD2
+isDRDY                      KEYWORD2
+setGain                     KEYWORD2
+readTest                    KEYWORD2
 
 
 ######################################
 # Constants (LITERAL1)
 #######################################
-STATUS	LITERAL1
-MUX	LITERAL1
-ADCON	LITERAL1
-DRATE	LITERAL1
-IO	LITERAL1
-OFC0	LITERAL1
-OFC1	LITERAL1
-OFC2	LITERAL1
-FSC0	LITERAL1
-FSC1	LITERAL1
-FSC2	LITERAL1
+STATUS      LITERAL1
+MUX         LITERAL1
+ADCON       LITERAL1
+DRATE       LITERAL1
+IO          LITERAL1
+OFC0        LITERAL1
+OFC1        LITERAL1
+OFC2        LITERAL1
+FSC0        LITERAL1
+FSC1        LITERAL1
+FSC2        LITERAL1
      
 
 WAKEUP	LITERAL1
